@@ -1,17 +1,12 @@
 <template>
 <div class="header">
-  <div class="logo">
-   <img :src="require(`@/assets/${'logo.png'}`)"/>
-  </div>
-
    <div class="topnav" id="myTopnav">
-    <a href="#about" class="active">About Us</a>
+    <a href="#about" class="active">Eldoret js</a>
     <a href="#services">Our Services</a>
     <a href="#location">Our Location</a>
     <a href="#events">Events</a>
     <a href="#members">Team</a>
     <a href="#about">Register</a>
-    <input type="text" class="search" placeholder="Type Something To Search">
     <a href="javascript:void(0);" class="icon" @click="showMenu()">
     <i class="fa fa-bars"></i>
     </a>
@@ -38,20 +33,9 @@ export default {
 </script>
 
 <style scoped>
-.logo{
-  display:flex;
-  justify-content: start;
-  width: 100%;
-  height: auto;
-}
-.logo img{
-  width: 200px;
-  height: auto;
-  margin:10px 20px;
-}
 .topnav {
   overflow: hidden;
-  background-color:hsla(356,86%,55%,1);
+  background-color:#ff9e15;
   padding: 10px;
 }
 
@@ -71,7 +55,7 @@ export default {
 
 .topnav a:hover {
   /* background-color: #ddd; */
-  color: #ff9e15;
+  color: #99381f;
   text-decoration: underline;
   transition: ease-in-out 500ms;
   
@@ -118,17 +102,11 @@ export default {
     float: none;
     display: block;
     text-align: left;
+    height: 1vh;
+    margin-top: -5px;
   }
-  @media screen and (max-width: 600px) {
-    .search {
-      display: none;
-    }
-    .logo img{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin:20px auto;
-    }
+  .active{
+    text-transform: uppercase;
   }
 }
 </style>
